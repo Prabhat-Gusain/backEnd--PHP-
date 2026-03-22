@@ -16,8 +16,8 @@
     Better for submiting credentials
 */ -->
 
-<!-- HTML code -->
-<!DOCTYPE html>
+<!-- HTML code using GET method-->
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -39,6 +39,35 @@
 
 <!-- php program -->
 <?php 
-    echo $_GET["username"];
-    echo $_POST["password"];
+    echo $_GET["username"]."<br>";
+    echo $_GET["password"]."<br>";
+?> -->
+
+
+<!-- Html code using POST -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML User Form</h1>
+    <form action="4-getAndPost.php" method="post">
+        <label>Username:</label><br>
+        <input type="text" name="username"><br>
+        <label>Password</label><br>
+        <input type="password" name="password"><br>
+        <button type="submit">Log In</button>
+    </form>
+
+</body>
+</html>
+
+
+<!-- PHP Program -->
+<?php
+    echo "{$_POST["username"]} <br>";
+    echo "{$_POST["password"]} <br>";
 ?>
